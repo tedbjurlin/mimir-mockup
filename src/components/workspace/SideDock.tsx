@@ -1,19 +1,19 @@
-import { BrainCircuit, Settings } from "lucide-react";
+import { Atom, BookMarked, BrainCircuit, Search, Settings } from "lucide-react";
 
 const SideDock: React.FC = () => {
   return (
     <div className="side-dock">
-      <button className="concept-notes-button">
-        <BrainCircuit className="concept-notes-icon" />
+      <button className="thought-notes-button">
+        <BrainCircuit className="thought-notes-icon" />
       </button>
       <button className="concept-notes-button">
-        <BrainCircuit className="concept-notes-icon" />
+        <Atom className="concept-notes-icon" />
       </button>
-      <button className="concept-notes-button">
-        <BrainCircuit className="concept-notes-icon" />
+      <button className="reference-notes-button">
+        <BookMarked className="reference-notes-icon" />
       </button>
-      <button className="concept-notes-button">
-        <BrainCircuit className="concept-notes-icon" />
+      <button className="search-button">
+        <Search className="search-icon" />
       </button>
       <button className="settings-button">
         <Settings />
@@ -21,3 +21,5 @@ const SideDock: React.FC = () => {
     </div>
   );
 };
+
+export default SideDock;
