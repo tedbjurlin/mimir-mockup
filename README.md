@@ -1,7 +1,3 @@
-# Tauri + React + Typescript
+# Mimir Mockup
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+This repository contains a mockup of how the note-taking application Mimir might appear. I am using it to test styles and themes without needing to have the whole application build first.
