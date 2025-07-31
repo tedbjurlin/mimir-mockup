@@ -1,0 +1,15 @@
+body, html {
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html, body, #root {
+  height: 100vh;
+}
