@@ -1,4 +1,5 @@
 import FileTreeItem from "./FileTreeItem";
+import "./FileTree.scss";
 
 const RightFileTree: React.FC = () => {
   return (

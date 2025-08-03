@@ -1,0 +1,15 @@
+.workspace-container {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.left-workspace-leaf {
+  width: 10rem;
+  border-right: 1px solid black;
+}
+
+.right-workspace-leaf {
+  width: 15rem;
+  border-left: 1px solid black;
+}

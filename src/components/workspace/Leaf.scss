@@ -1,0 +1,9 @@
+@use "../../ThemeVariables.scss" as t;
+
+.workspace-leaf {
+  flex: 0 0 auto;
+  overflow-y: auto;
+  @include t.apply-theme {
+    background-color: t.theme("background-secondary");
+  }
+}

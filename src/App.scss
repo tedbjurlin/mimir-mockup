@@ -1,4 +1,7 @@
-body, html {
+@use "./ThemeVariables.scss" as t;
+
+body,
+html {
   width: 100%;
   margin: 0;
 }
@@ -10,6 +13,11 @@ body {
   user-select: none;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }

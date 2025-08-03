@@ -1,0 +1,66 @@
+@use "../../ThemeVariables.scss" as t;
+
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 auto;
+  border-bottom: 1px solid black;
+  height: 2rem;
+  @include t.apply-theme {
+    background-color: t.theme("background-secondary");
+  }
+
+  &__left,
+  &__right {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  &__left {
+    display: flex;
+  }
+
+  &__note-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.title-bar-button {
+  background-color: white;
+  border: 0;
+  height: 1.8rem;
+  width: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  @include t.apply-theme {
+    background-color: t.theme("background-secondary");
+  }
+
+  &:hover {
+    background-color: black;
+    color: white;
+    @include t.apply-theme {
+      background-color: t.theme("secondary");
+      color: t.theme("background-primary");
+    }
+  }
+
+  &:active {
+    background-color: darkslategrey;
+    color: white;
+    @include t.apply-theme {
+      background-color: t.theme("secondary");
+      color: t.theme("background-primary");
+    }
+  }
+
+  &__icon {
+    width: 1.5rem;
+    flex: 0 0 auto;
+  }
+}

@@ -1,0 +1,37 @@
+@mixin apply-theme($themes: $themes) {
+  @each $theme, $map in $themes {
+    body[data-theme="#{$theme}"] & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function theme($key) {
+  @return map-get($theme-map, $key);
+}
+
+$themes: (
+  "light": (
+    "background-primary": rgb(250, 246, 230),
+    "background-secondary": rgb(236, 233, 217),
+    "background-tertiary": rgb(210, 206, 184),
+    "primary": rgb(0, 0, 0),
+    "secondary": rgb(77, 74, 55),
+    "tertiary": rgb(115, 109, 86),
+    "accent-primary": rgb(195, 161, 11),
+    "accent-secondary": rgb(177, 158, 34),
+    "accent-tertiary": rgb(238, 194, 72),
+  ),
+);

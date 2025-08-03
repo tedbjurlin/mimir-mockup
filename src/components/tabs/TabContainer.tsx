@@ -1,3 +1,5 @@
+import "./TabContainer.scss";
+
 const TabContainer: React.FC = () => {
   return (
     <div className="tab-container">
@@ -34,22 +36,22 @@ const TabContainer: React.FC = () => {
       <pre>
         <code className="markdown-code">
           {`struct {
-            bool success;
-            int rounded;
-            double precise;
-          } fetchNumber() {
-            return { true, 42, 42.0 };
-          }
+  bool success;
+  int rounded;
+  double precise;
+} fetchNumber() {
+  return { true, 42, 42.0 };
+}
 
-          int main(char** argv, int argc) {
-            auto result = fetchNumber();
-            if(result.success) {
-              if(result.rounded > 40) {
-                std::cout << result.precise << std::endl;
-              }
-            }
-            return 0;
-          }`}
+int main(char** argv, int argc) {
+  auto result = fetchNumber();
+  if(result.success) {
+    if(result.rounded > 40) {
+      std::cout << result.precise << std::endl;
+    }
+  }
+  return 0;
+}`}
         </code>
       </pre>
 

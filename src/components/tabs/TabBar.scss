@@ -1,0 +1,18 @@
+@use "../../ThemeVariables.scss" as t;
+
+.tab-bar {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  @include t.apply-theme {
+    background-color: t.theme("background-tertiary");
+  }
+
+  flex: 0 0 auto;
+
+  &__spacer {
+    border-bottom: 1px solid black;
+    flex: 1 1 auto;
+  }
+}

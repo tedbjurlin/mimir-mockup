@@ -1,23 +1,28 @@
 import { Atom, BookMarked, BrainCircuit, Search, Settings } from "lucide-react";
+import "./SideDock.scss";
 
 const SideDock: React.FC = () => {
   return (
     <div className="side-dock">
-      <button className="thought-notes-button">
-        <BrainCircuit className="thought-notes-icon" />
-      </button>
-      <button className="concept-notes-button">
-        <Atom className="concept-notes-icon" />
-      </button>
-      <button className="reference-notes-button">
-        <BookMarked className="reference-notes-icon" />
-      </button>
-      <button className="search-button">
-        <Search className="search-icon" />
-      </button>
-      <button className="settings-button">
-        <Settings />
-      </button>
+      <div className="side-dock__section">
+        <button className="side-dock__thought-notes-button side-dock__button side-dock__button--selected">
+          <BrainCircuit className="side-dock__thought-notes-icon side-dock__button-icon" />
+        </button>
+        <button className="side-dock__concept-notes-button side-dock__button">
+          <Atom className="side-dock__concept-notes-icon side-dock__button-icon" />
+        </button>
+        <button className="side-dock__reference-notes-button side-dock__button">
+          <BookMarked className="side-dock__reference-notes-icon side-dock__button-icon" />
+        </button>
+      </div>
+      <div className="side-dock__section">
+        <button className="side-dock__search-button side-dock__button">
+          <Search className="side-dock__search-icon side-dock__button-icon" />
+        </button>
+        <button className="side-dock__settings-button side-dock__button">
+          <Settings className="side-dock__settings-icon side-dock__button-icon" />
+        </button>
+      </div>
     </div>
   );
 };

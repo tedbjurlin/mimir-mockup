@@ -1,0 +1,34 @@
+@use "../../ThemeVariables.scss" as t;
+
+.footer-bar {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid black;
+  height: 1.5rem;
+  @include t.apply-theme {
+    background-color: t.theme("background-tertiary");
+  }
+
+  &__info {
+    border-radius: 10%;
+    height: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    gap: 0.1rem;
+    padding: 0.1rem;
+    margin: 0.1rem 0.5rem 0.1rem;
+    @include t.apply-theme {
+      background-color: t.theme("background-secondary");
+    }
+
+    &-icon {
+      width: 0.9rem;
+    }
+  }
+}

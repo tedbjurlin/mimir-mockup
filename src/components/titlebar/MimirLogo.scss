@@ -1,0 +1,14 @@
+@use "../../ThemeVariables.scss" as t;
+
+.logo {
+  width: 3rem;
+
+  &__icon {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    @include t.apply-theme {
+      color: t.theme("accent-secondary");
+    }
+  }
+}

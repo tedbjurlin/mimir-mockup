@@ -1,0 +1,46 @@
+@use "../../ThemeVariables.scss" as t;
+
+.side-dock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  overflow: auto;
+  border-right: 1px solid black;
+  width: 3rem;
+  @include t.apply-theme {
+    background-color: t.theme("background-tertiary");
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    background-color: white;
+    border: 0;
+    color: grey;
+    margin-top: 0.4rem;
+    @include t.apply-theme {
+      background-color: t.theme("background-tertiary");
+      color: t.theme("tertiary");
+    }
+
+    &--selected {
+      color: black;
+
+      @include t.apply-theme {
+        color: t.theme("primary");
+      }
+    }
+
+    &:hover {
+      color: black;
+
+      @include t.apply-theme {
+        color: t.theme("primary");
+      }
+    }
+  }
+}

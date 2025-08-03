@@ -1,0 +1,23 @@
+.file-tree-item {
+
+  &__card {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+  }
+
+  &__icon {
+    width: 1.2rem;
+    flex: 0 0 auto;
+  }
+
+  &__children {
+    margin-left: 1rem;
+  }
+
+  &__name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

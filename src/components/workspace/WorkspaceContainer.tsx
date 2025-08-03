@@ -3,6 +3,7 @@ import RightFileTree from "../file-tree/RightFileTree";
 import Leaf from "./Leaf";
 import SideDock from "./SideDock";
 import WorkspaceBody from "./WorkspaceBody";
+import "./WorkspaceContainer.scss";
 
 const WorkspaceContainer: React.FC = () => {
   return (
